@@ -16,18 +16,7 @@ import kotlinx.coroutines.launch
 import java.io.IOException
 import java.net.URL
 
-data class WeatherData(
-    val main: Main,
-    val weather: List<Weather>
-)
 
-data class Main(
-    val temp: Double
-)
-
-data class Weather(
-    val description: String
-)
 
 
 class LiteWeather: Fragment() {
@@ -60,7 +49,6 @@ class LiteWeather: Fragment() {
                 val description = weatherData.weather.firstOrNull()?.description
 
                 val temperatureTextView: TextView = view.findViewById(R.id.temperatureTextView)
-                val descriptionTextView: TextView = view.findViewById(R.id.descriptionTextView)
 
                 val temperatureText = "Temperature: $temperature °C"
                 val iconCode = when (description){
@@ -128,7 +116,6 @@ class LiteWeather: Fragment() {
 
                 requireActivity().runOnUiThread {
                     temperatureTextView.text = temperatureText
-                    descriptionTextView.text = description
 
                     Glide.with(requireContext())
                         .load(imageUrl)

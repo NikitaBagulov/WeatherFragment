@@ -13,7 +13,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/descriptionTextView"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureTextView"
         app:layout_constraintVertical_bias="0.08"
         android:src="@null"
         tools:ignore="MissingConstraints" />
@@ -29,16 +29,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/descriptionTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/temperatureTextView"
-        app:layout_constraintVertical_bias="0.046" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
